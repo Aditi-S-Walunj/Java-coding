@@ -15,6 +15,7 @@ public class Operations {
 		System.out.println("Multiplication is:"+(no1*no2));
 		System.out.println("Division is:"+(no1/no2));
 		float div=sc.nextFloat();
+		System.out.println("Division is:"+div);
 		System.out.println("Remainder is:"+(no1%no2));
 		if(no1>no2 && no1!=no2)
 		{
