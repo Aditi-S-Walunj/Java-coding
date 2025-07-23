@@ -1,15 +1,14 @@
-package Area;
+package circle.abc;
+import java.util.Scanner;
 
-class Circle{
-	static double Pi=3.14;
-	void insert(int radius) {
-		double area=Pi*radius*radius;
-		System.out.println("Area of circle is:"+area);
-	}
-}
 public class AreaOfCircle {
 public static void main(String[] args) {
-	Circle c1=new Circle();
-	c1.insert(2);
+	final float Pi=3.14f;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the radius:");
+	int radius=sc.nextInt();
+	float area=Pi*radius*radius;
+	System.out.println("Area of Circle:"+area);
+	sc.close();
 }
 }
