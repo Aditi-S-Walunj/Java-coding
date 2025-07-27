@@ -23,7 +23,7 @@ public class NestedIfElse {
 		}
 		else
 		{
-			System.out.println("Number 3 is Maximum:");
+			System.out.println("Number 2 is Maximum:");
 		}
 		sc.close();
 }
