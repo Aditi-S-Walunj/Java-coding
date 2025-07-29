@@ -1,17 +1,18 @@
-package acc;
+package abc;
+import java.util.Scanner;
 
 public class BankAcc {
-	static String BankName;
-	BankAcc(String AccHolder,double balance){
-	System.out.println("Account Holder is:"+AccHolder);	
-	System.out.println("Bank Balance is:"+balance);	
+static void ShowBankName(String BankName){
+		System.out.println("Bank Name is:"+BankName);
+	}
+void displayBalance(){
 }
-void display() {
-	System.out.println("Bank name is:"+BankName);
-}
-public static void main(String[] args){
-		BankAcc b1=new BankAcc("aditi",2000.0);
-		BankAcc.BankName="HDFC";
-		b1.display();
-		}
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter your Bank Balance:");
+	float balance=sc.nextFloat();
+	System.out.println("Bank Balance:"+balance);
+	sc.close();
+	ShowBankName("HDFC");
+	}
 }
