@@ -1,46 +1,26 @@
 package abc;
 
-class OfficialDetails{
-	int EmpId;
-	String EmpName;
-	String EmpDesig;
-	float EmpSal;
-	String EmpDept;
-	boolean EmpStatus;
-void insert(int EmpId,String EmpName,String EmpDesig,float EmpSal,String EmpDept,boolean EmpStatus) 
-    {
-	System.out.println(EmpId);
-	System.out.println(EmpName);	
-	System.out.println(EmpDesig);	
-	System.out.println(EmpSal);	
-	System.out.println(EmpDept);
-	System.out.println(EmpStatus);	
-	}
-void display() {
-}
-}
-class PersonalDetails{
-	long AdharNo;
-	long MobileNo;
-	String PanNo;
-	String Address;
-void insert(long AdharNo,long MobileNo,String PanNo,String Address) 
-    {	
-	System.out.println(AdharNo);	
-	System.out.println(MobileNo);	
-	System.out.println(PanNo);	
-	System.out.println(Address);	
-	}
-void display() {	
-}
-}
 public class Employee {
-public static void main(String[] args) {
-	OfficialDetails o1=new OfficialDetails();
-	PersonalDetails p1=new PersonalDetails();
-	o1.insert(101,"aditi","xyz",2000f,"abc",true);
-	p1.insert(1234567123,1234567895,"xyzabc","Sangamner");
-	o1.display();
-	p1.display();
+private int empId;
+private String empName;
+private String empDesignation;
+private double empSal;
+public Employee(int empId, String empName, String empDesignation, double empSal) 
+{
+	  this.empId = empId;
+      this.empName = empName;
+	  this.empDesignation = empDesignation;
+	  this.empSal = empSal;
 }
+ @Override
+public String toString() {
+return "Employee{"+"empId="+empId+",empName='"+empName+'\''+",empDesignation='"+empDesignation+'\''+",empSal="+empSal+'}';
+	    }
+public static void main(String[] args) 
+{
+ Employee employee1 = new Employee(101, "John Doe", "Manager", 50000.0);
+ Employee employee2 = new Employee(102, "Jane Smith", "Developer", 45000.0);
+ System.out.println(employee1);
+ System.out.println(employee2);
+	}
 }
