@@ -11,8 +11,9 @@ public static void main(String[] args) {
 		i++;
 	}
 	while(i<=n);
-	
 	{
-		System.out.println(sum);	}
+		System.out.println(sum);	
+	}
 }
 }
+
