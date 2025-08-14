@@ -1,26 +1,46 @@
 package abc;
+import java.util.Scanner;
 
 public class Employee {
-private int empId;
-private String empName;
-private String empDesignation;
-private double empSal;
-public Employee(int empId, String empName, String empDesignation, double empSal) 
-{
-	  this.empId = empId;
-      this.empName = empName;
-	  this.empDesignation = empDesignation;
-	  this.empSal = empSal;
-}
- @Override
-public String toString() {
-return "Employee{"+"empId="+empId+",empName='"+empName+'\''+",empDesignation='"+empDesignation+'\''+",empSal="+empSal+'}';
+	int id;
+	String name;
+	String deptname;
+	double salary;
+	static int cnt = 0;
+	Employee(int id, String name, String deptname, double salary) {
+		this.id = id;
+		this.name = name;
+		this.deptname = deptname;
+		this.salary = salary;
+		cnt++;
+		System.out.println("Count of object : " + cnt);
 	    }
-public static void main(String[] args) 
-{
- Employee employee1 = new Employee(101, "John Doe", "Manager", 50000.0);
- Employee employee2 = new Employee(102, "Jane Smith", "Developer", 45000.0);
- System.out.println(employee1);
- System.out.println(employee2);
-	}
+	void display() {
+		System.out.println(this.id + "\t\t" + this.name + "\t\t" + this.deptname + "\t\t" + this.salary);
+		}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of employees:");
+		int n = sc.nextInt();
+        Employee[] e = new Employee[n];
+        for (int i = 0; i < n; i++) {
+	    System.out.println("Enter " + (i + 1) + " employee data");
+	    System.out.print("Enter ID: ");
+	    int id = sc.nextInt();
+	    sc.nextLine();
+	    System.out.print("Enter Employee Name: ");
+	    String en = sc.nextLine();
+	    System.out.print("Enter Department Name: ");
+	    String dn = sc.nextLine();
+	    System.out.print("Enter Salary: ");
+	    double salary = sc.nextDouble();
+	    e[i] = new Employee(id, en, dn, salary);
+	    }
+        System.out.println("\nEmployee Records:");
+        System.out.println("ID\tEmployee Name\t\tDepartment\tSalary");
+        for (int i = 0; i < n; i++) {
+        	e[i].display();
+        	}
+	    sc.close();
+	 }
 }
