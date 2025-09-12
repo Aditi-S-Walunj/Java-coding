@@ -1,5 +1,5 @@
 package abc;
-// Create a Laptop class with fields: brand, ramSize, price. Write getters and setters with validation
+
 class Laptop{
 	private String Brand;
 	private String ramSize;
@@ -14,13 +14,21 @@ class Laptop{
 		return ramSize;
 	}
 	public void setRamSize(String ramSize) {
+		if (ramSize > 0) {
 		this.ramSize = ramSize;
+	    } else {
+            System.out.println("RAM size must be greater than 0!");
+        }
 	}
 	public int getPrice() {
 		return price;
 	}
 	public void setPrice(int price) {
+	 if (price > 10000) {
 		this.price = price;
+	 } else {
+        System.out.println("Price must be greater than 10000!");
+        }
 	}
 }
 public class Laptopencapsulation {
@@ -34,3 +42,4 @@ public static void main(String[] args) {
 	System.out.println("Laptop Price:"+l1.getPrice());
 }
 }
+
