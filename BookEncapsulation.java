@@ -23,7 +23,7 @@ class Book{
 		this.price = price;
 	}
 }
-public class bookEncapsulation {
+public class BookEncapsulation {
 	public static void main(String[] args) {
 		Book b1=new Book();
 		b1.setTitle("Shyam chi aai");
@@ -34,3 +34,4 @@ public class bookEncapsulation {
 		System.out.println("Book Price:"+ b1.getPrice());
 	}
 }
+
